@@ -24,6 +24,7 @@ export class NotesService {
     note.id = id;
     this.notes.push(note);
   }
+
   deleteNote(note: Note) {
     this.notes = this.notes.filter(n => n.id !== note.id);
   }

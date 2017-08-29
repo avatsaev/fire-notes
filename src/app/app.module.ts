@@ -8,6 +8,7 @@ import {environment} from '../environments/environment';
 import { NoteComponent } from './components/note/note.component';
 import { NoteFormComponent } from './components/note-form/note-form.component';
 import {FormsModule} from '@angular/forms';
+import {NotesService} from './services/notes.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import {FormsModule} from '@angular/forms';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [NotesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

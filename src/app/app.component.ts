@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {Note} from './models/note';
+import { Component } from '@angular/core';;
+import {NotesService} from './services/notes.service';
 
 @Component({
   selector: 'app-root',
@@ -8,24 +8,10 @@ import {Note} from './models/note';
 })
 export class AppComponent {
 
-  notes: Note[] = [
-    {
-      id: 1,
-      title: 'note 1',
-      contents: 'my note 1'
-    }, {
-      id: 2,
-      title: 'note 2',
-      contents: 'my note 2'
-    }
-  ];
+  showNoteForm = false;
 
-  constructor() {
+  constructor(public notesSrv: NotesService) {
 
-  }
-
-  deleteNote(note: Note) {
-    this.notes = this.notes.filter(n => n.id !== note.id);
   }
 
 

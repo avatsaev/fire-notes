@@ -21,4 +21,17 @@ export class NoteFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  onNoteSubmit() {
+    this.onSubmit.emit({...this.note} as Note);
+    this.note.title = '';
+    this.note.contents = '';
+  }
+
+  onFormCancel () {
+    this.note.title = '';
+    this.note.contents = '';
+
+    this.onCancel.emit();
+  }
+
 }
