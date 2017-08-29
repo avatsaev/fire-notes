@@ -1,5 +1,5 @@
 
 
-<app-note *ngFor="let note of notes" [note]="note" (onNoteDelete)="deleteNote($event)" >
+<app-note *ngFor="let note of notesSrv.notes" [note]="note" (onNoteDelete)="notesSrv.deleteNote($event)" >
 
 </app-note>
