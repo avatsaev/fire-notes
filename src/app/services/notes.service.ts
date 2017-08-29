@@ -19,7 +19,11 @@ export class NotesService {
   constructor() { }
 
 
-
+  addNote(note: Note) {
+    const id = this.notes.length + 1;
+    note.id = id;
+    this.notes.push(note);
+  }
   deleteNote(note: Note) {
     this.notes = this.notes.filter(n => n.id !== note.id);
   }

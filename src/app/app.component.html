@@ -1,5 +1,13 @@
 
 
+<a style="margin-bottom: 10px" class="button is-success">
+  ADD NOTE
+</a>
+
+<app-note-form (onSubmit)="addNote($event)"></app-note-form>
+
+
+
 <app-note *ngFor="let note of notes" [note]="note" (onNoteDelete)="deleteNote($event)" >
 
 </app-note>
