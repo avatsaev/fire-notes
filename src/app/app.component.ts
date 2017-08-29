@@ -24,6 +24,10 @@ export class AppComponent {
 
   }
 
+  deleteNote(note: Note) {
+    this.notes = this.notes.filter(n => n.id !== note.id);
+  }
+
 
 
 }
