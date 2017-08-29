@@ -5,10 +5,12 @@ import { AppComponent } from './app.component';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {AngularFireModule} from 'angularfire2';
 import {environment} from '../environments/environment';
+import { NoteComponent } from './components/note/note.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NoteComponent
   ],
   imports: [
     BrowserModule,
