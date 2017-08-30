@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';;
 import {NotesService} from './services/notes.service';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,6 +12,7 @@ export class AppComponent {
   showNoteForm = false;
 
   constructor(public notesSrv: NotesService) {
+
 
   }
 
