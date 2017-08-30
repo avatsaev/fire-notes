@@ -1,0 +1,30 @@
+<div class="note-form">
+
+  <div class="field">
+    <label class="label">Title</label>
+    <div class="control">
+      <input class="input" [(ngModel)]="note.title" type="text" placeholder="Title">
+    </div>
+  </div>
+
+
+  <div class="field">
+    <label class="label">Content</label>
+    <div class="control">
+      <textarea class="textarea" [(ngModel)]="note.content" placeholder="Content"></textarea>
+    </div>
+  </div>
+
+
+  <div class="field is-grouped">
+    <div class="control">
+      <button class="button is-primary" (click)="submitNote()">Submit</button>
+    </div>
+    <div class="control">
+      <button class="button is-link" (click)="onCancel.emit()">Cancel</button>
+    </div>
+  </div>
+
+</div>
+
+

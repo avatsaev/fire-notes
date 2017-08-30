@@ -1,1 +1,19 @@
+<div style="margin-bottom: 20px">
+  <a class="button is-success" (click)="showNoteForm = !showNoteForm">
+    ADD NOTE
+  </a>
+</div>
 
+<app-note-form *ngIf="showNoteForm"
+               (onSubmit)="notesService.addNote($event) ; showNoteForm = false"
+               (onCancel)="showNoteForm = false"
+>
+
+</app-note-form>
+
+<app-note
+        *ngFor="let note of notesService.notes | async"
+        [note]="note"
+        (onSave)="notesService.updateNote($event)"
+        (onDelete)="notesService.deleteNote($event)"
+></app-note>
